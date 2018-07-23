@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand">Mongo Scraper</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link home">Home</a>
+            <a class="nav-item nav-link saved-articles">Saved Articels</a>
+            {{#unless articles}}
+            <button class='btn btn-md btn-success' id='scrape'>Scrape Articles!</button>
+            {{/unless}}
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+     <div class='container text-center center'>
+        <h1 class="display-4" id ="jumbotron-text">
+            <strong>Mongo Scraper
+            </strong>
+        </h1>
+        <p class="lead" id = "jumbotron-lead">Charlotte Obsever Edition</p>
+    </div>
+</div>
+<div class="col-md-12">
+    {{#unless articles}}
+    <h2 class="heading text-center">Looks like you don't have any new articles yet</h2>
+    {{/unless}}
+    <ul>
+        {{#each articles}} {{#unless saved}} {{> articles/articles-block}} {{/unless}} {{/each}}
+    </ul>
+</div>

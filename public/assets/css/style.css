@@ -1,0 +1,50 @@
+.jumbotron{
+    background-image: url('../images/news.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 20%;
+    height: 60vh;
+    display: table;
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+li{
+    margin: 10px;
+}
+.note{
+    margin-left: 5px;
+}
+.delete{
+    margin-right: 5px;
+}
+
+#jumbotron-text{
+    color: white;
+    font-size: 5vw;
+    text-shadow: 1.5px 1.5px 0px #000;
+}
+#jumbotron-lead{
+    color: white;
+    font-size: 2vw;
+    text-shadow: 1.5px 1.5px 0px #000;
+}
+.center{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+#card-text{
+    
+    vertical-align: middle;
+}
+
+.heading{
+    font-size: 2vw;
+    padding: 2%;
+    color: white;
+    background-color: orange;
+}
