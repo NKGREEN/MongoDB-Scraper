@@ -10,17 +10,19 @@
             <a class="nav-item nav-link saved-articles">Saved Articels</a>
             {{#unless articles}}
             <button class='btn btn-md btn-success' id='scrape'>Scrape Articles!</button>
-            {{/unless}}
+            {{/unless}} {{#if articles}}
+            <button class='btn btn-md btn-danger' id='delete-articles'>Delete Articles</button>
+            {{/if}}
         </div>
     </div>
 </nav>
 <div class="jumbotron">
-     <div class='container text-center center'>
-        <h1 class="display-4" id ="jumbotron-text">
+    <div class='container text-center center'>
+        <h1 class="display-4" id="jumbotron-text">
             <strong>Mongo Scraper
             </strong>
         </h1>
-        <p class="lead" id = "jumbotron-lead">Charlotte Obsever Edition</p>
+        <p class="lead" id="jumbotron-lead">Charlotte Obsever Edition</p>
     </div>
 </div>
 <div class="col-md-12">

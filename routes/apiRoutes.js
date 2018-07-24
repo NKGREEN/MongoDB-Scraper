@@ -110,7 +110,7 @@ router.delete('/articles', function (req, res) {
     db.Article.remove({ saved: false })
         .then(function (dbArticle) {
             if(dbArticle){
-            console.log(dbArticle.n)
+            res.json(dbArticle.n)
             }
         })
 

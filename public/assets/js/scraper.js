@@ -128,13 +128,13 @@ $('.saved-articles').on('click', function(){
     window.location = '/saved'
 })
             
-            // if (document.referrer.split('/')[2] != location.hostname) {
-            //     $.ajax('/articles', {
-            //         type: 'delete'
-            //     }).then(function (data){
-            //         if(data){
-            //             location.reload();
-            //         }
-            //     })
-            // }
+            $('#delete-articles').on('click', function(){
+                $.ajax('/articles', {
+                    type: 'delete'
+                }).then(function (data){
+                    if(data){
+                        location.reload();
+                    }
+                })
+            })
             
