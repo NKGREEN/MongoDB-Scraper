@@ -48,3 +48,8 @@ li{
     color: white;
     background-color: orange;
 }
+a:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    
+}

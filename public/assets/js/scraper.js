@@ -39,7 +39,6 @@ $(".saved").on('click', function () {
         data: newState
     }).then(function (data) {
         if (data) {
-            window.location = "/saved";
             console.log(data)
         }
     })
@@ -122,7 +121,12 @@ $(document).on('click','#note-delete',  function () {
             }
         })
 })
-
+$('.home').on('click', function(){
+    window.location = '/';
+})
+$('.saved-articles').on('click', function(){
+    window.location = '/saved'
+})
             
             // if (document.referrer.split('/')[2] != location.hostname) {
             //     $.ajax('/articles', {
