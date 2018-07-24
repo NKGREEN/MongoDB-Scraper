@@ -5,8 +5,12 @@ var mongoose = require("mongoose");
 var db = require("../models");
 var express = require("express");
 var router = express.Router();
+var user = process.env.USER;
+var password = process.env.PASSWORD;
+var mlab = 'mongodb://' + user + ':' + password + '@ds137687.mlab.com:37687/mongoscraperkg';
+var databaseUrl = mlab;
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/scraper");
+mongoose.connect(databaseUrl);
 
 router.get("/api/scrape", function (req, res) {
     // First, we grab the body of the html with request

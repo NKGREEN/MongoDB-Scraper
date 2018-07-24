@@ -61,7 +61,7 @@ $('.note').on('click', function () {
     var id = $(this).data('id');
     $.get('/note/' + id, function (data) {
         console.log(data.notes)
-        if (data != 'help') {
+        if (data != 'none') {
             console.log(data.notes[0].body)
             for (var i = 0; i < data.notes.length; i++) {
                 var divCard = $("<div>").addClass('card').attr('id', 'card')
@@ -123,14 +123,14 @@ $(document).on('click','#note-delete',  function () {
         })
 })
 
-            console.log(document.cookie)
-            if (document.referrer.split('/')[2] != location.hostname) {
-                $.ajax('/articles', {
-                    type: 'delete'
-                }).then(function (data){
-                    if(data){
-                        location.reload();
-                    }
-                })
-            }
-            document.cookie = 'mywebsite'
+            
+            // if (document.referrer.split('/')[2] != location.hostname) {
+            //     $.ajax('/articles', {
+            //         type: 'delete'
+            //     }).then(function (data){
+            //         if(data){
+            //             location.reload();
+            //         }
+            //     })
+            // }
+            

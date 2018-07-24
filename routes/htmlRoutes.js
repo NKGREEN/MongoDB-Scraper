@@ -1,8 +1,12 @@
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var db = require("../models");
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/scraper");
+require('dotenv').config()
+var user = process.env.USER;
+var password = process.env.PASSWORD;
+var mlab = 'mongodb://' + user + ':' + password + '@ds137687.mlab.com:37687/mongoscraperkg';
+var databaseUrl = mlab;
+mongoose.connect(databaseUrl);
 module.exports = function (app) {
     app.get("/", function (req, res) {
         db.Article.find({saved: false}).then(function (dbArticle) {
